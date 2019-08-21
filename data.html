@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>American Voters 2018 - Data</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid"> 
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+        </header>
+        <!-- end box-header -->
+        
+        <!-- nav -->
+        <nav>
+          <ul class="box-primary-nav">
+              <li class="box-label">Jump to a Page</li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="age.html">Voters by Age</a></li>
+              <li><a href="ethnicity.html">Voters by Ethnicity</a></li>
+              <li><a href="employment.html">Voters by Employment Status</a></li>
+              <li><a href="location.html">Voters by Location</a></li>
+              <li><a href="data.html">Checkout the Data</a><i class="ion-ios-circle-filled color"></i></li>
+          </ul>
+      </nav>
+        <!-- end nav -->  
+    </div>
+    
+    <!-- Top bar -->
+    <div class="top-bar">
+        <h1>Voters by State<br>& Ethnicity</h1>
+        <p>Exploring the Characteristics of American Voters in 2018</p>
+    </div>
+    <!-- end Top bar -->
+    
+    <!-- Main container -->
+    <div class="container main-container clearfix"> 
+        <div class="col-md-12" align="right">
+            <!-- <h3 class="text-uppercase"><center>Of Votes and Voices</center></h3>
+            <h5><center>A Contemplation on Representation</center></h5>
+            <div class="h-30"></div> -->
+            <h3 class="text-uppercase">Full Dataset:</h3>
+            <h5><a href="https://github.com/JRabii/P2Round1">https://github.com/JRabii/P2Round1</a></h5>
+            <div class="h-30"></div>
+        </div>
+        <div class="col-md-12">
+            <div class="container">
+                <div class="row margin-top-50">
+                  <div class="col-md-2">
+                    <aside class="filters">
+                      <div class="panel panel-default">
+                        <div class="panel-heading" align="center">Refine Search</div>
+                        <p align="center">Pro-Tip: Use State Abbreviations</p>
+                        <div class="panel-body">
+                          <form>
+                            <div class="form-group">
+                              <ul class="list-group" id="filters">
+                                <li class="filter list-group-item">
+                                  <label for="date">Filter by State</label>
+                                  <input class="form-control" id="State" type="text" placeholder="CA">
+                                </li>
+                                <li class="filter list-group-item">
+                                  <label for="date">Filter by Ethnicity</label>
+                                  <input class="form-control" id="Ethnicity" type="text" placeholder="Asian">
+                                </li>
+                              </ul>
+                            </div>
+                            <button id="filter-btn" type="button" class="btn btn-default" justify-content="center">Update Table</button>
+                          </form>
+                        </div>
+                      </div>
+                    </aside>
+                  </div>
+                  <div class="col-md-10">
+                    <div id="table-area" class="">
+                      <table id="ufo-table" class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th class="table-head">State</th>
+                            <th class="table-head">Ethnicity</th>
+                            <th class="table-head">Total<br>Population</th>
+                            <th class="table-head">Total<br>Citizen<br>Population</th>
+                            <th class="table-head">Total<br>Registered</th>
+                            <th class="table-head">Percent<br>of Total<br>Population<br>Registered</th>
+                            <th class="table-head">Percent of<br>Citizens<br>Registered</th>
+                            <th class="table-head">Total<br>Voted</th>
+                            <th class="table-head">Percent<br>Voted of<br>Total<br>Population</th>
+                            <th class="table-head">Percent<br>Voted of<br>Citizens</th>
+                          </tr>
+                        </thead>
+                        <tbody></tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        </div>
+    </div>
+    <!-- end Main container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Box Portfolio 2016</p>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+            <script src="js/data.js"></script>
+            <script src="js/app2.js"></script>
+        </div>
+    </footer>
+    <!-- end footer -->
+    
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

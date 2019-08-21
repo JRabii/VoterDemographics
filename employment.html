@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>American Voters 2018 - Employment Analysis</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/d3Style.css"> -->
+    
+    <!-- From Sequences Project -->
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" type="text/css" href="css/sequences.css"/>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+       <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="index.html"><img src="img/logo.png" width="80" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+        
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label">Jump to a Page</li>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="age.html">Voters by Age</a></li>
+                <li><a href="ethnicity.html">Voters by Ethnicity</a></li>
+                <li><a href="employment.html">Voters by Employment Status</a><i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="location.html">Voters by Location</a></li>
+                <li><a href="data.html">Checkout the Data</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+    
+    <!-- top-bar -->
+    <div class="top-bar">
+        <h1>Voters by Gender<br>& Employment Status</h1>
+        <p>Who Really Votes in America?</p>
+    </div>
+    <!-- end top-bar -->
+    
+    <!-- main-container -->
+    <div class="container main-container">
+            <div class="col-md-12">
+                    <h3 class="text-uppercase" align="center">Where do voters work?</h3>
+                    <h5 align="center">Cross-Examining America's Voters by Gender and Job</h5>
+                    <div class="h-30"></div>
+            </div>
+        
+                <div class="col-md-6">
+                    <p><strong>Ever wondered how well-represented your field or industry is in America?</strong>
+                    </p>
+                    <p>
+                        We certainly did!        
+                    </p>
+                    <p>
+                        That's why we put together this nifty, interactive diagram that helps us explore registration and turnout rates through the 
+                        lenses of gender and employment status.
+                    </p>
+                    <p>
+                        Try it out for yourself! Just start in the center and glide your mouse sideways to uncover new information about who works in America, 
+                        who votes, and who does both.   
+                    </p>
+                </div>
+        
+                <div class="col-md-6">
+                        <h5>Interesting Finds from the Data</h5>
+                    <ul class="cat-ul">
+                        <li><i class="ion-ios-circle-filled"></i> Male and female civilian workers voted at exactly the same rate</li>
+                        <li><i class="ion-ios-circle-filled"></i> More women were registered and fewer women abstained than men</li>
+                        <li><i class="ion-ios-circle-filled"></i> 5% of the women and 3.5% of the men who voted were unemployed</li>
+                        <li><i class="ion-ios-circle-filled"></i> Government workers have the smallest percentages of 'unknowns'</li>
+                    </ul>
+                    <div class="h-10"></div>
+                    
+                </div>
+            
+            <div id="main">
+                <div id="sequence"></div>
+                    <div id="chart">
+                        <!-- <div id="explanation" style="visibility: hidden;">
+                            <span id="percentage"></span><br/>
+                            of people in America had the above characteristics in 2018
+                        </div> -->
+                    </div>
+                </div>
+                <div id="sidebar">
+                    <input type="checkbox" id="togglelegend"> Legend<br/>
+                        <!-- <div id="legend" style="visibility: hidden;"></div> -->
+                    <div id="legend"></div>
+                </div>
+    </div>
+
+    <!-- end main-container -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p class="copyright">© Box Portfolio 2016</p>
+        </div>
+    </footer>
+    <!-- end footer -->
+    
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script> -->
+  
+
+
+    <!--  custom script -->
+    <script src="js/sequences.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
